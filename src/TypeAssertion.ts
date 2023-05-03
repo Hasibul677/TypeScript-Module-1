@@ -1,7 +1,9 @@
+
 let test: any;
 test = "Learning Type Assertion";
 (test as string).length; // this way for recommanded
 <string>test.length; // using angle bracat
+
 
 // using function
 
@@ -22,3 +24,18 @@ const kgToGram2 = <string>kgToGram("10")
 
 console.log("kgToGram1: ", kgToGram1);
 console.log("kgToGram2: ", kgToGram2);
+
+
+
+type CustomError = {
+  message :string
+};
+try{
+
+}catch(err){
+  console.log((<CustomError>err).message); 
+}
+
+
+
+
