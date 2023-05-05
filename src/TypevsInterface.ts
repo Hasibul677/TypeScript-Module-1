@@ -42,3 +42,28 @@ const userfullInfo: IUserDetails = {
   salary: 0,
   isAdmin: false,
 };
+
+// we can use interface in a function
+
+type addTwoNumbers = (num1:number, num2:number)=>number // type alias
+
+interface IAddTwoNumbers{
+  (num1:number, num2:number):number 
+}
+
+
+const addNumber:addTwoNumbers =(num1, num2)=> num1 + num2; // funtion with alias (for clean code alias is recommanded)
+const iaddNumber:IAddTwoNumbers =(num1, num2)=> num1 + num2; // funtion with interface
+
+
+// Type alias and interface with array
+
+type rollNumberType = number[];
+
+interface IRollNumbers{
+[index:number] : number
+}
+
+const rollNumbers : IRollNumbers =[1,2,3,4]  // with alias
+const irollNumbers : IRollNumbers =[1,2,3,4] //[index] // with interface
+
